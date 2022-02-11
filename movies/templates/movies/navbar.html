@@ -1,0 +1,56 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rottenpotatoes</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/navbar.css' %}">
+    {% block additionalStyles %} {% endblock %}
+    <script src="https://kit.fontawesome.com/afd6aa68df.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <a href="localhost:8000/movies" class="web-name">Rottenpotatoes</a>
+            <div class="menu">
+
+                <div class="box">
+                    <form name="search">
+                        <input type="text" class="input" name="search" 
+                        onmouseout="document.search.txt.value = ''">
+                    </form>
+                        <i class="fas fa-search"></i>
+                </div>
+                
+                <a href="localhost:8000/movies">Home</a>
+                <a href="#">About me</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <button class="hamburguer">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>  
+
+    {% block content %}
+    
+    {% endblock%}
+
+
+
+    <script>
+        const hamburguer = document.querySelector('.hamburguer');
+        hamburguer.addEventListener('click', function(){
+            this.classList.toggle('is-active');
+        })
+    </script>
+
+</body>
+</html>

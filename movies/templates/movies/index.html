@@ -1,0 +1,30 @@
+{% extends 'movies/navbar.html' %}
+{% load static %}
+
+{% block additionalStyles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/index.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+    <div class="body-container">
+        {% for item in movies %}
+        <div class="movie">
+            
+            <a href="localhost:8000/" class="movie-name">{{item.name}}</a>
+            <p class="movie-info">Fecha de estreno: {{item.year}}</p>
+            <p class="movie-info">Calificacion: {{item.grade}}</p>
+            <p class="movie-info">Director: </p>
+            {% for director in item.director.all %}
+            <a href="" class="person-link">{{director}}</a>
+            {% endfor %}
+            <p class="movie-info">Reparto:</p>
+            {% for actor in item.actor.all %}
+            <a href="" class="person-link">{{actor}}</a>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+    
+{% endblock%}

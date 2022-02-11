@@ -1,0 +1,56 @@
+:root{
+    --primary: #8c38ff;
+    --light: #EEEEEE;
+    --dark: #212121;
+    --bg-gray: #2E382E;
+}
+
+.body-container{
+    margin-top: 72px;
+    background-color: var(--bg-gray);
+    min-height: 100%;
+height: auto !important;
+height: 100%;
+}
+
+.movie{
+    width: 750px;
+    margin: 0px auto;
+    height: 300px;
+    display: block;
+    background-color: var(--light);
+    border:3px solid var(--primary);
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 15px 15px   ;
+}
+
+.movie-name{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 32px;
+    color: black;
+    font-family: 'Source Code Pro', monospace;
+    text-transform: capitalize;
+    margin-left: 20px;
+}
+
+.movie-info{
+    margin-top: 10px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    margin-left: 25px;
+    color: black;
+}
+
+.person-link{
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 25px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18px;
+    display: block;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: black;
+}
